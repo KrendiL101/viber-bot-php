@@ -19,6 +19,11 @@ class Contact extends Message
     protected $name;
 
     /**
+     * @var string
+     */
+    protected $text;
+
+    /**
      * Phone number of the contact. Max 18 characters
      *
      * @var string
@@ -75,6 +80,16 @@ class Contact extends Message
         $this->name = $name;
 
         return $this;
+    }
+
+    /**
+    * Get the value of Text of the message
+    *
+    * @return string
+    */
+    public function getText()
+    {
+        return $this->text;
     }
 
     /**
