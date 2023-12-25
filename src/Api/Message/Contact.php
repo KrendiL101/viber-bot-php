@@ -19,6 +19,8 @@ class Contact extends Message
     protected $name;
 
     /**
+     * Text of the message
+     *
      * @var string
      */
     protected $text;
