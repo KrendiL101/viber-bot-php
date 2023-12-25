@@ -19,7 +19,7 @@ class Contact extends Message
     protected $name;
 
     /**
-     * Text of the message
+     * Text of the message (optional)
      *
      * @var string
      */
