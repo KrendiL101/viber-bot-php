@@ -34,7 +34,8 @@ class Contact extends Message
      * {@inheritdoc}
      */
     protected $propertiesMap = [
-        'contact' => 'setConcat'
+        'contact' => 'setConcat',
+        'text' => 'setText'
     ];
 
     /**
@@ -78,6 +79,17 @@ class Contact extends Message
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @param string $text
+     * @return self
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
 
         return $this;
     }
