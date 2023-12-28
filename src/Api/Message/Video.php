@@ -40,6 +40,19 @@ class Video extends Message
     protected $thumbnail;
 
     /**
+     * The text of the message
+     *
+     * @var string
+     */
+    protected $text;
+
+    /**
+     * Description of image
+     * @var string
+     */
+    protected $file_name;
+
+    /**
      * {@inheritdoc}
      */
     public function getType()
@@ -57,6 +70,8 @@ class Video extends Message
             'size' => $this->getSize(),
             'duration' => $this->getDuration(),
             'thumbnail' => $this->getThumbnail(),
+            'text' => $this->getText(),
+            'file_name' => $this->getFileName(),
         ]);
     }
 
@@ -152,6 +167,30 @@ class Video extends Message
     public function setThumbnail($thumbnail)
     {
         $this->thumbnail = $thumbnail;
+
+        return $this;
+    }
+
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    public function setText($text)
+    {
+        $this->text = $text;
+
+        return $this;
+    }
+
+    public function getFileName()
+    {
+        return $this->file_name;
+    }
+
+    public function setFileName($file_name)
+    {
+        $this->file_name = $file_name;
 
         return $this;
     }
