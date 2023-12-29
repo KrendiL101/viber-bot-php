@@ -53,6 +53,10 @@ class Event
                 }
             }
         }
+
+        if (isset($this->message) && isset($this->sender)) {
+            $this->message->setSender($this->sender);
+        }
     }
 
     /**
