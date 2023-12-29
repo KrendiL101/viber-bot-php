@@ -21,6 +21,13 @@ class Sticker extends Message
     protected $sticker_id;
 
     /**
+     * URL of the sticker image (JPEG)
+     *
+     * @var string
+     */
+    protected $media;
+
+    /**
      * {@inheritdoc}
      */
     public function getType()
@@ -60,5 +67,15 @@ class Sticker extends Message
         $this->sticker_id = $sticker_id;
 
         return $this;
+    }
+
+    /**
+     * Get the value of URL of the sticker image (JPEG)
+     *
+     * @return string
+     */
+    public function getMedia()
+    {
+        return $this->media;
     }
 }
